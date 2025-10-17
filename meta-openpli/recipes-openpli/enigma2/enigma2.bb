@@ -100,8 +100,12 @@ RDEPENDS:${PN}-build-dependencies = "\
 
 inherit gitpkgv pythonnative
 
-PV = "2.7+git${SRCPV}"
-PKGV = "2.7+git${GITPKGV}"
+ENIGMA2_BRANCH ?= "develop"
+
+# make the origin overridable from OE config, for local mirroring
+SRC_ORIGIN ?= "git://github.com/openriko/enigma2jack.git;protocol=https"
+SRC_URI := " ${SRC_ORIGIN};branch=${ENIGMA2_BRANCH}"
+
 
 LDFLAGS:prepend = " -lxml2 "
 
