@@ -13,8 +13,5 @@
 	url = git://git.openembedded.org/openembedded-core
 	branch = mickledore
 	ignore = dirty
-[submodule "meta-python2"]
-	path = meta-python2
-	url = https://gitlab.com/jack2015/meta-python2.git
 	branch = mickledore
 	ignore = dirty
